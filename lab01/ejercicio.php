@@ -7,3 +7,8 @@ declare(strict_types=1);
 // ==========================================
 
 // Desarrolla aquí tu solución según el Issue #1
+$alumno = [
+    "nombre" => "Juan",
+    "edad" => 20,
+    "notas" => [8.0, 7.5, 9.0]
+];
