@@ -83,3 +83,16 @@ for ($i = 1; $i <= 4; $i++) {
 
 echo "\nArreglo asociativo multidimensional generado:\n";
 print_r($alumnos);
+foreach ($alumnos as $alumno) {
+    $promedio = 0;
+    $nombre = $alumno['nombre'];
+    $edad = $alumno['edad'];
+    $notas = $alumno['notas'];
+    $promedio = array_sum($notas) / count($notas);
+    $promedio = round($promedio, 2);
+    if ($promedio >= 7.0) {
+        echo "$nombre\tAPROBADO\tcon {$promedio}.\n";
+    } else {
+        echo "$nombre\tREPROBADO\tcon {$promedio}.\n";
+    }
+}
