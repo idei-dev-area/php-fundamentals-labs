@@ -29,6 +29,7 @@ $alumnos = [
         "notas" => [8.0, 6.0, 9.0]
     ]
 ];
+
 foreach ($alumnos as $alu){
     $prom=0;
     $cant=0;
