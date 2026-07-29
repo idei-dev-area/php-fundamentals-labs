@@ -6,13 +6,13 @@ declare(strict_types=1);
 // Tema: Programación Orientada a Objetos
 // ==========================================
 
-// Desarrolla aquí tu solución según el Issue #3
+// Desarrolla aquí tu solución según el Issue #45
 class MiembroEquipo
 {
     private string $nombre;
     private string $rol;
 
-    public int $tareasCompletadas = 0;
+    private int $tareasCompletadas = 0;
 
     public function __construct(string $nombre, string $rol)
     {
@@ -27,7 +27,7 @@ class MiembroEquipo
 
     public function obtenerPerfil(): string
     {
-        return "El miembro {$this->nombre} desempeña el rol de {$this->rol} y ha completado {$this->tareasCompletadas} laboratorios.";
+        return "El miembro {$this->nombre} desempeña el rol de {$this->rol} y ha completado {$this->tareasCompletadas} tareas laboratorios.";
     }
 }
 
