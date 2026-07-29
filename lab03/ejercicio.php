@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 // ==========================================
@@ -8,31 +9,35 @@ declare(strict_types=1);
 
 // Desarrolla aquí tu solución según el Issue #3
 
-class MiembroEquipo{
+class MiembroEquipo
+{
     private string $nombre;
     private string $rol;
-    public int $tareasCompletadas=0;
+    public int $tareasCompletadas = 0;
 
-    function __construct(string $nombre, string $rol){
-        $this->nombre=$nombre;
-        $rolesValidos=["Junior", "Technical Leader"];
-        if(!in_array($rol, $rolesValidos)){
+    function __construct(string $nombre, string $rol)
+    {
+        $this->nombre = $nombre;
+        $rolesValidos = ["Junior", "Technical Leader"];
+        if (!in_array($rol, $rolesValidos)) {
             throw new Exception("Rol no válido.\n");
-        }else{
-            $this->rol=$rol;
+        } else {
+            $this->rol = $rol;
         }
     }
 
-    function completarTarea(): void{
+    function completarTarea(): void
+    {
         $this->tareasCompletadas++;
     }
 
-    function obtenerPerfil(): string{
+    function obtenerPerfil(): string
+    {
         return "El miembro del equipo " . $this->nombre . " tiene rol de " . $this->rol . " y ha completado " . $this->tareasCompletadas . " tareas.\n";
     }
 }
 
-try{
+try {
     $miembro1 = new MiembroEquipo("Mia", "Junior");
     $miembro1->completarTarea();
     $miembro1->completarTarea();
@@ -43,7 +48,6 @@ try{
     echo $miembro2->obtenerPerfil();
 
     $miembro3 = new MiembroEquipo("Nicolas", "Intern");
-}catch(Exception $e){
+} catch (Exception $e) {
     echo "Error: " . $e->getMessage();
 }
-
