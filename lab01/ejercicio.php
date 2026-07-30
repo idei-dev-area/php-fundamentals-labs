@@ -29,12 +29,12 @@ $alumnos = [
     ],
 ];
 
-foreach ($alumnos as $alumnos) {
-    $promedio = array_sum($alumnos["notas"]) / count($alumnos["notas"]);
+foreach ($alumnos as $alumno) {
+    $promedio = array_sum($alumno["notas"]) / count($alumno["notas"]);
 
     if ($promedio >= 7) {
-        echo "El/la Alumno/a {$alumnos['nombre']}: Aprobado con nota: " . number_format($promedio, 2) . PHP_EOL;
+        echo "El/la Alumno/a {$alumno['nombre']}: Aprobado con nota: " . number_format($promedio, 2) . PHP_EOL;
     } else {
-        echo "El/la Alumno/a {$alumnos['nombre']}: Desaprobado/a con nota: "  . number_format($promedio, 2) . PHP_EOL;
+        echo "El/la Alumno/a {$alumno['nombre']}: Desaprobado/a con nota: "  . number_format($promedio, 2) . PHP_EOL;
     }
 }
