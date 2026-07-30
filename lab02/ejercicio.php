@@ -6,7 +6,7 @@ declare(strict_types=1);
 // Tema: Funciones y Tipado Estricto
 // ==========================================
 
-// Desarrolla aquí tu solución según el Issue #2
+// Desarrolla aquí tu solución según el Issue #23
 function calcularTotalViaticos(int $dias, float $montoDiario, float $gastosExtras): float {
     if ($dias <= 0 || $montoDiario <= 0 || $gastosExtras <= 0) {
         throw new Exception("Los valores ingresados deben ser mayor a cero \n\n");
